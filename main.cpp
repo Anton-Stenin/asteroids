@@ -45,8 +45,8 @@ public:
         int verts = 20;
         for (int i = 0; i < verts; i++) {
             float radius = (float) rand() / (float) RAND_MAX * 0.4f + 0.8f;
-            // угол поворота в радианах
-            // 0; 2Пи * 1/20; 2Пи * 2/20; 2Пи * 3/20; ... 2Пи * 19/20; 2Пи
+            // turn angle in radians
+            // 0; 2Pi * 1/20; 2Pi * 2/20; 2Pi * 3/20; ... 2Pi * 19/20; 2Pi
             float a = ((float) i / (float) verts) * 6.28318f;
             asteroidModel.emplace_back(radius * sinf(a), radius * cosf(a));
         }
@@ -57,7 +57,7 @@ public:
                 {0.0f,  -5.0f},
                 {-2.5f, +2.5f},
                 {+2.5f, +2.5f}
-        }; // простой равнобедренный треугольник
+        }; // simple isosceles triagle
         
         
         return true;
